@@ -1,0 +1,29 @@
+.upload-main{
+    width:40%;
+    margin:auto;
+    text-align: center;
+}
+.upload-main div{
+    padding:10%;
+    box-sizing: border-box;
+    margin:5%;
+    border-radius: 5px;
+}
+.upload-main input{
+    width:100% !important
+}
+.upload-main button{
+    width:max-content;
+    margin:5% auto 0;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    padding:2% 8%;
+}
+.upload-main button img{
+    transform: rotate(180deg);
+    height:2.5rem;
+}
+.upload-main h1{
+    margin-bottom:8%;
+}

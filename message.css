@@ -1,0 +1,28 @@
+.msg-img{
+    height:8rem;
+    display: flex;
+    margin: auto;
+}
+.a-msg{
+    background: none !important;
+    border:5px solid #193956;
+    padding:5% !important;
+    text-align: center;
+    width:100%;
+    margin-bottom:10%;
+}
+.a-msg label{
+    color:#193956 !important
+}
+.a-msg input{
+    width:100% !important; 
+    border:2px solid #193956 !important
+}
+.a-msg button{
+    width:max-content;
+    margin: auto;
+    padding:2% 8%;
+}
+.msg{
+    height:80px;
+}
