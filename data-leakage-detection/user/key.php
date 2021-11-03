@@ -20,7 +20,7 @@ $id = $_GET['id'];
                                     mysqli_select_db($con,"dataleakage" );
 	$sql = "insert into askkey (user, filename, status, reciver,k) values ('$_SESSION[name]','$id','no','admin','')";
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
-	//echo '<script language="javascript">alert("Thank You!! for asking for key")</script>';
+	echo '<script language="javascript">alert("Thank You!! for asking for key")</script>';
 	header("Location: user.php");
 	exit;
 								}

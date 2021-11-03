@@ -3,8 +3,8 @@
 <head>
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
-	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="../stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -32,94 +32,53 @@ header( 'Content-Type: text/html; charset=utf-8' );
  }
  
 ?>
-<body class="body">
-	
-	<header class="mainHeader">
-		<nav><ul>
-			<li ><a href="user.php">Home</a></li>
-			<li><a href="viewmsg.php">View msg</a></li>
-			<li class="active"><a href="view file.php">View Articles</a></li>
-			<li ><a href="viewkey.php">View Key</a></li>
-			
-			
-		</ul></nav>
-	</header>
+<body>
+    <nav>
+        <h3><a href="../index.php">HOME</a></h3>
+        <h3><a href="view file.php" class="user-active-nav">ARTICLES</a></h3>
+		<h3><a href="viewmsg.php">MESSAGES</a></h3>
+        <h3><a href="viewkey.php">KEYS</a></h3>
+        <h3><a href="logout.php">LOGOUT</a></h3>
+    </nav>
 		
-	<div class="mainContent1">
-		<div class="content">	
-				<article class="topcontent1">	
-					<header>
-						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">View Articles</a></h2>
-					</header>
-					
-					<footer>
-					</footer>
-					
-					<content>
-						<p>
-							<table align="center" cellpadding="9" cellspacing="2" width="10" ><tr bgcolor="green">
-							<td >Article Name</td><td>Date</td><td>Detail</td><td>View</td><td>Ask KEY</td></tr>
-					<?php
-                            {
-                                $row="";
-                                $con = mysqli_connect("localhost","root","Mounvi@123");
-                                if (!$con)
-                                    echo('Could not connect: ' . mysqli_error());
-                                else
-                                {
-                                    mysqli_select_db( $con, "dataleakage");
-                                    $sql = 'SELECT * FROM presentation';
-                                    $retval = mysqli_query($con , $sql);
-                                    if(! $retval )
-                                    {
-                                        die('Could not get data: ' . mysqli_error());
-                                    }
-                                    while($row = mysqli_fetch_assoc($retval))
-                                    {
-                                           echo "<tr bgcolor='white'><td> {$row['subject']} </td> " .
-                                               
-												"<td> {$row['time']} </td> " .
-												"<td> {$row['fname']} </td> " .
-												
-												"<td>Download:</br><a href='detail.php?id=". "{$row['subject']}'>{$row['subject']}</a>" .
-												"<td></br><a href='key.php?id=". "{$row['subject']}'?f=". "{$row['fname']}'>Click To ask</a> " .
-											    "</td>" ;
-                                    } 
-                                }
-                                mysqli_close($con);
-                            }
-                        ?> 
-					
-					
-					
-					
-					                          
-</tr>
-
+		<table>
+        <thead>
+            <th>Article Name</th>
+            <th>Date</th>
+            <th>Detail</th>
+            <th>View</th>
+            <th>Click to ask</th>
+        </thead>
+		<tbody>
+<?php
+		{
+			$row="";
+			$con = mysqli_connect("localhost","root","Mounvi@123");
+			if (!$con)
+				echo('Could not connect: ' . mysqli_error());
+			else
+			{
+				mysqli_select_db( $con, "dataleakage");
+				$sql = 'SELECT * FROM presentation';
+				$retval = mysqli_query($con , $sql);
+				if(! $retval )
+				{
+					die('Could not get data: ' . mysqli_error());
+				}
+				while($row = mysqli_fetch_assoc($retval))
+				{
+						echo "<tr>
+								<td> {$row['subject']} </td> " .
+								"<td> {$row['time']} </td> " .
+								"<td> {$row['fname']} </td> " .
+								"<td><a href='detail.php?id=". "{$row['subject']}'><img src='../img/download.png' alt='download'></a>" .
+							    "<td></br><a href='key.php?id=". "{$row['subject']}'?f=". "{$row['fname']}'><img src='../img/ask.png' alt='ask' /></a> " ."</td>" ;
+				} 
+			}
+			mysqli_close($con);
+		}
+	?> 
+	</tbody>
 </table>
-
-						</p>
-						</content>
-					
-				</article>
-
-			</div>
-<aside class="top-sidebar">
-					<article>
-					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
-					
-					<p></p>
-				    </article>
-				</aside>	
-		</div>
-			
-				
-	</div>
-	
-	<footer class="mainFooter">
-		<p>CSE3501 Project</p>
-	</footer>
-
 </body>
 </html>

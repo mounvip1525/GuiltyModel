@@ -43,65 +43,27 @@
     </script>
   </head>
 
-<body class="body">
-	
-	<header class="mainHeader">
-		<nav><ul>
-			<li ><a href="index.php">Home</a></li>
-			<li class="active"><a href="register.html">Registration</a></li>
-			<li ><a href="userlogin.php">UserLogin</a></li>
-			<li><a href="adminlogin.php">AdminLogin</a></li>			
-	</ul></nav>
-	</header>
-		
-	<div class="mainContent1">
-		<div class="content">	
-				<article class="topcontent1">	
-					<header>
-						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Registration</a></h2>
-					</header>
-                
-      <div class="box">
-        <p>		  
-          <form name="s" action="register.php" method="POST" onsubmit="return valid()">
-            <table align="center" cellpadding="" cellspacing="" width="">
-              <tr> 
-                <td colspan="2" align="center"><font size="2"><b></b></font></td>
-              </tr>
-              <tr> 
-                <td><font face="Courier New" size="+1"><strong>Name</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="uname" id="uname" class="b"></td>
-              </tr>
-              <tr> 
-                <td><font face="Courier New" size="+1"><strong>User ID</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="uid" id="uid"class="b"></td>
-              </tr>
-              <tr> 
-                <td><font face="Courier New" size="+1"><strong>Password</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="pass" id="pass"class="b"></td>
-              </tr>
-                <tr> 
-                <td><font face="Courier New" size="+1"><strong>Email ID</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="email" id="email"class="b"></td>
-              </tr>
-                <td></td>
-                <td><input type="submit" name="s" value="submit" class="b1" > 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                  <input type="reset" name="r" value="clear" class="b1"></td>
-              </tr>
-            </table>
+<body>
+      <div class="auth-main">
+        <div>
+            <h1 class="auth-head">GMA</h1>
+            <img src="img/auth.png" alt="gma" />
+        </div>
+        <div class="auth-form">
+          <h1>SIGNUP</h1>
+          <p>Already have an account? <a href="userlogin.php" style="color:white">Login</a></p>
+          <form name="s" action="register.php" method="POST" onsubmit="return valid()" class="l-form">
+            <label for="name">Name</label>
+            <input type="text" name="uname" id="uname" >
+            <label for="username">User ID</label>
+            <input type="number" name="uid" id="uid">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="pass" id="pass">
+            <input type="submit" name="s" value="SUBMIT" class="c-btn c-btn-2"> 
           </form>
         </div>
-      </p>
-		</content>
-	</article>
-  </div>
-			
-</div>
-	
-	<footer class="mainFooter">
-		<p>CSE3501 Project </p>
-	</footer>
-
+      </div>
 </body>
 </html>

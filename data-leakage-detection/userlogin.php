@@ -18,7 +18,7 @@
         <h1>LOGIN</h1>
         <p>Don't have an account? <a href="register.html" style="color:white">Signup</a></p>
         <form name="s" action="check_login_user.php" method="POST" onsubmit="return valid()" class="l-form">
-          <label for="username">Username</label>
+          <label for="username">User ID</label>
 		  <input type="text" name="username" id="username">
           <label for="password">Password</label>
 		  <input type="password" name="password" id="username">
