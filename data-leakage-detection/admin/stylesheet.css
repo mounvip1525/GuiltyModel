@@ -1,13 +1,16 @@
-
-   
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	font-family: 'Roboto', sans-serif;
+}  
+/* body {
 	color: #000305;
-	font-size: 87.5%; /* Base font size: 14px */
+	font-size: 87.5%; 
 	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	line-height: 1.429;
 	margin: 0;
 	padding: 0;
 	text-align: left;
+	font-family: 'Roboto', sans-serif;
 	}
 	
 .body {
@@ -16,24 +19,17 @@ body {
 	width: 90%;
 }
 	
-/* ===========================
-   ========= Headings ======== 
-   =========================== */
-h2 {font-size: 1.571em}	/* 22px */
-h3 {font-size: 1.429em}	/* 20px */
-h4 {font-size: 1.286em}	/* 18px */
-h5 {font-size: 1.143em}	/* 16px */
-h6 {font-size: 1em}		/* 14px */
+h2 {font-size: 1.571em}	
+h3 {font-size: 1.429em}	
+h4 {font-size: 1.286em}	
+h5 {font-size: 1.143em}	
+h6 {font-size: 1em}		
 
 h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
 }
-
-/* ===========================
-   ======= Anchor style ====== 
-   =========================== */
 a {
 	outline: 0;
 	}
@@ -54,10 +50,6 @@ a:hover, a:active {
 	color: #fff;
 	text-decoration: none;
 }
-
-/* ===========================
-   ===== Main Navigation ===== 
-   =========================== */
    
 .mainHeader nav {
 	background: #666;
@@ -107,10 +99,6 @@ a:hover, a:active {
 	margin: 3% 0;
 }
 
-/* ===========================
-   ======= Content Area ====== 
-   =========================== */
-
 .mainContent {
 	overflow: hidden;
 	line-height: 25px;
@@ -137,7 +125,7 @@ a:hover, a:active {
 }
 
 .content {
-	width: 68%;
+	width: 100%;
 	float: left;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -149,10 +137,6 @@ a:hover, a:active {
 	color: #999;
 	font-size: 85%;
 }
-
-/* ===========================
-   ======== Sidebar ========== 
-   =========================== */
 
 .top-sidebar {
 	width: 24%;
@@ -189,10 +173,6 @@ a:hover, a:active {
 	padding: 2% 3%;
 }
 
-/* ===========================
-   ========= Footer ========== 
-   =========================== */
-
 .mainFooter {
 	width: 100%;
 	float: left;
@@ -210,10 +190,6 @@ a:hover, a:active {
 	width: 91%;
 	margin: 2% auto;
 }
-
-/* ===========================
-   ====== Media Queries ====== 
-   =========================== */
 
 @media only screen and (min-width : 150px) and (max-width : 780px)
 {
@@ -383,4 +359,4 @@ a:hover, a:active {
 		width: 86%;
 		margin: 2% auto;
 	}
-}
+} */
