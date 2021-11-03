@@ -63,7 +63,6 @@
 	height: 3rem;
   }
   /* tables */
-    /* tables */
 	table{
 		display:flex;
 		justify-content: center;
@@ -107,6 +106,7 @@
 		justify-content: center;
 		align-items: center;
 	}
+	/* upload */
 .admin-upload{
 	width:60%;
 	margin:1% auto;
@@ -126,3 +126,99 @@
 	margin:auto;
 	display:block;
 }
+.rotate-img{
+    transform: rotate(180deg);
+    height:1rem;
+}
+/* message */
+.msg-img{
+    height:8rem;
+    display: flex;
+    margin: auto;
+}
+.a-msg{
+    background: none !important;
+    border:5px solid #193956;
+    padding:5% !important;
+    text-align: center;
+    width:100%;
+    margin-bottom:10%;
+}
+.a-msg label{
+    color:#193956 !important
+}
+.a-msg input{
+    width:100% !important; 
+    border:2px solid #193956 !important
+}
+.a-msg button{
+    width:max-content;
+    margin: auto;
+    padding:2% 8%;
+}
+.msg{
+    height:80px;
+}
+/* request */
+.req-main{
+    display:flex;
+    min-height:100vh;
+    font-size: large;
+}
+.req-main > div{
+    width:50%;
+    padding: 5%;
+}
+.req-main input{
+    width:100% !important;
+}
+.req-main h1{
+    margin-bottom:10%;
+    text-align: center;
+    margin-top:-15% !important;
+}
+.req-main > div button {
+    width:max-content;
+    margin:5% auto;
+    padding:2% 7%;
+}
+.req-main .auth-form{
+    width:50%;
+    padding:10% !important;
+    box-sizing: border-box;
+}
+.req-main ul,.n-main ul{
+    list-style-type: none;
+}
+.req-main li,.n-main li{
+    padding:3%;
+    border-left:3px solid #193956;
+    margin:5%;
+    font-size: x-large;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.admin-requests{
+	height: 70vh;
+	overflow-y: scroll;
+}
+
+.req-main ::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  .req-main ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 5px;
+  }
+   
+  /* Handle */
+  .req-main ::-webkit-scrollbar-thumb {
+	background: #193956; 
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .req-main  ::-webkit-scrollbar-thumb:hover {
+	background: #193956; 
+  }

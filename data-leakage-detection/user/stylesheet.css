@@ -161,7 +161,7 @@ td,th{
     outline:none;
     padding:2% 8%;
 }
-.upload-main button .rotate-img{
+.upload-main button, .rotate-img{
     transform: rotate(180deg);
     height:1rem;
 }
