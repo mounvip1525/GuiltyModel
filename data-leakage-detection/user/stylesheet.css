@@ -70,6 +70,10 @@ thead{
 td,th{
     width:120px;
     text-align: center;
+	min-height:50px;
+	display: flex;
+    justify-content: center;
+	align-items: center;
 }
 /* user -  messages */
 .n-main{
