@@ -26,9 +26,11 @@ if (!isset($_SESSION['name'])) {
 		//include'includes/conn.php';
  	}
 ?>
-<body class="body">
+<body>
 	<nav>
         <h3><a href="admin.php">HOME</a></h3>
+		<h3><a href="m_user.php">USERS</a></h3>
+		<h3><a href="m_arti.php" class="admin-active-nav">ARTICLES</a></h3>
         <h3><a href="upload.php">UPLOAD</a></h3>
 		<h3><a href="viewmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
@@ -37,11 +39,11 @@ if (!isset($_SESSION['name'])) {
     </nav>	
 	<table>
 		<thead>
-			<td>Article Subject</td>
-			<td>Upload Date</td>
-			<td>File Name</td>
-			<td>Key</td>
-			<td>Delete</a></td>
+			<th>Article Subject</th>
+			<th>Upload Date</th>
+			<th>File Name</th>
+			<th>Key</th>
+			<th>Delete</a></th>
 		</thead>
 		<tbody>
 		<?php

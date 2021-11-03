@@ -1,4 +1,7 @@
 /* landing */
+.admin-active-nav{
+	border-bottom:2px solid white;
+}
 .a-landing {
 	display: flex;
 	height: 100vh;
@@ -104,4 +107,22 @@
 		justify-content: center;
 		align-items: center;
 	}
-  
+.admin-upload{
+	width:60%;
+	margin:1% auto;
+	padding:2% 5% 5%;
+}
+.admin-upload div{
+	padding:5%;
+}
+.admin-upload h1{
+	text-align: center;
+}
+.admin-upload .auth-form{
+	border-radius: 5px;
+}
+.admin-upload .admin-upload-btn{
+	width:40%;
+	margin:auto;
+	display:block;
+}
