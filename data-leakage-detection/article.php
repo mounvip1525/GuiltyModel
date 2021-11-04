@@ -4,17 +4,14 @@
 <head>
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
-	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
-
 <body class="body">
 	
 	<header class="mainHeader">
 		<nav><ul>
-						<li ><a href="index.php">Home</a></li>
+			<li ><a href="index.php">Home</a></li>
 			<li><a href="register.html">Registration</a></li>
 			<li ><a href="userlogin.php">UserLogin</a></li>
 			<li ><a href="adminlogin.php">AdminLogin</a></li>
@@ -46,8 +43,9 @@
                   <marquee behavior="scroll" direction="up" scrolldelay="150" onMouseOver="this.stop();" onMouseOut="this.start();">
                         <?php
                             {
+								require("config.php");
                                 $row="";
-                                $con = mysqli_connect("localhost","root","Mounvi@123");
+                                $con = mysqli_connect("localhost","root",$dbPass);
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else

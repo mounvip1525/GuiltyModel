@@ -3,17 +3,14 @@
 <head>
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
-	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 	<nav>
         <h3><a href="userlogin.php">LOGIN</a></h3>
         <h3><a href="register.html">SIGNUP</a></h3>
     </nav>
-		
 	<div class="main">
         <h1>GUILTY MODEL AGENT</h1>
         <div class="landing">
@@ -43,6 +40,5 @@
         </div>
         <button class="c-btn">Try Now</button>
     </div>
-
 </body>
 </html>

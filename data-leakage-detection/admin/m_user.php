@@ -46,9 +46,9 @@ if (!isset($_SESSION['name'])) {
 		</thead>
 		<tbody>
 		<?php
-		{
+			require("config.php");
 			$row="";
-			$con = mysqli_connect("localhost","root","Mounvi@123");
+			$con = mysqli_connect("localhost","root",$dbPass);
 			if (!$con)
 				echo('Could not connect: ' . mysqli_error());
 			else
@@ -71,7 +71,6 @@ if (!isset($_SESSION['name'])) {
 				} 
 			}
 			mysqli_close($con);
-		}
 		?> 				                          
 </tbody>
 </table>

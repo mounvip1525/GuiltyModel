@@ -8,37 +8,28 @@ if (!isset($_SESSION['name'])) {
 		} if (!$_SESSION['name']){
 		      echo  header("Location: http://localhost/data-leakage-detection/userlogin.php");
 		}
-
-		
 		else{
-		
 		define('ADMIN',$_SESSION['name']); //Get the user name from the previously registered super global variable
 		//if(!session_is_registered("admin")){ //If session not registered
-//header("location:login.php"); // Redirect to login.php page
-//}
-//else //Continue to current page
-header( 'Content-Type: text/html; charset=utf-8' );
-//include'includes/conn.php';
- }
- 
+		//header("location:login.php"); // Redirect to login.php page
+		//}
+		//else //Continue to current page
+		header( 'Content-Type: text/html; charset=utf-8' );
+		//include'includes/conn.php';
+ 	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
-	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
-
 <body class="body">
-	
 	<header class="mainHeader">
 		<img src="img/logo.gif">
-		<nav><ul>
-			
+		<nav><ul>	
 			<li ><a href="user.php">Home</a></li>
 			<li><a href="view file.php">View File</a></li>
 			<li><a href="viewmsg.php">View msg</a></li>

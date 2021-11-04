@@ -31,7 +31,8 @@ if (!isset($_SESSION['name'])) {
         <?php
 			if(!empty($_POST))
 			{
-				$con = mysqli_connect("localhost","root","Mounvi@123");
+				require("config.php");
+				$con = mysqli_connect("localhost","root",$dbPass);
 				if (!$con)
 					echo('Could not connect: ' . mysqli_error());
 				else

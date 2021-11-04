@@ -62,8 +62,9 @@ header( 'Content-Type: text/html; charset=utf-8' );
 							<td >Article Name</td><td>Key</td><td>Date</td><td><a href="a_detail.php">Detail</a></td></tr>
 					<?php
                             {
+								require("config.php");
                                 $row="";
-                                $con = mysqli_connect("localhost","root","Mounvi@123");
+                                $con = mysqli_connect("localhost","root",$dbPass);
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else

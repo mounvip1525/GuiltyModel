@@ -1,15 +1,12 @@
 <?php
 // Start a session for error reporting
 session_start();
+require("config.php");
 // Get our POSTed variables
 $a1 = $_POST['a1'];
 $a2 = $_POST['a2'];
 $a3 = $_POST['a3'];
-
-
-
-
- $con = mysqli_connect("localhost","root","Mounvi@123");
+ $con = mysqli_connect("localhost","root",$dbPass);
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else

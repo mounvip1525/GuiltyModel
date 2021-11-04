@@ -9,8 +9,9 @@
                   <marquee behavior="scroll" direction="up" scrolldelay="150" onMouseOver="this.stop();" onMouseOut="this.start();">
                         <?php
                             {
+					            require("config.php");
                                 $row="";
-                                $con = mysqli_connect("localhost","root","Mounvi@123");
+                                $con = mysqli_connect("localhost","root",$dbPass);
                                 if (!$con)
                                     echo('Could not connect: ' . mysqli_error());
                                 else
