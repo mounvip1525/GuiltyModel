@@ -42,21 +42,15 @@ if (!isset($_SESSION['name'])) {
 					}
 					else
 					{
-						move_uploaded_file($_FILES["file"]["tmp_name"],
-						"download/" . $_FILES["file"]["name"]) ;
+						move_uploaded_file($_FILES["file"]["tmp_name"],"download/" . $_FILES["file"]["name"]) ;
 						mysqli_select_db($con, "dataleakage");
-						$sql = "INSERT INTO presentation(subject,topic,fname,time) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . 
-							  $_FILES["file"]["name"] ."','".date("d/m/Y")."');";
-						if (!mysqli_query($con,$sql))
-							echo('Error : ' . mysql_error());
-						else
-							echo '<script language="javascript">alert("Thank You!! File Uploded")</script>';
+						$sql = "INSERT INTO presentation(subject,Topic,fname,time,sendto,objNames) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . $_FILES["file"]["name"] ."','".date("y/m/d")."','".""."','".""."');";
+						$result6 = mysqli_query($con,$sql) or die ("Could not send data into DB: " . mysqli_error($con));
 						}
 				}
 				mysqli_close($con);
 			}
-        ?>
-		
+        ?>	
     </head>
      <body>
 	 <nav>
@@ -64,9 +58,9 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php">USERS</a></h3>
 		<h3><a href="m_arti.php">ARTICLES</a></h3>
         <h3><a href="upload.php" class="admin-active-nav">UPLOAD</a></h3>
-		<h3><a href="viewmsg.php">MESSAGES</a></h3>
+		<h3><a href="sendmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
-        <h3><a href="sendkey.php">KEYS</a></h3>
+        <h3><a href="sendkey.php">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>
     </nav>	
 

@@ -32,9 +32,9 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php">USERS</a></h3>
 		<h3><a href="m_arti.php" class="admin-active-nav">ARTICLES</a></h3>
         <h3><a href="upload.php">UPLOAD</a></h3>
-		<h3><a href="viewmsg.php">MESSAGES</a></h3>
+		<h3><a href="sendmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
-        <h3><a href="sendkey.php">KEYS</a></h3>
+        <h3><a href="sendkey.php">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>
     </nav>	
 	<table>

@@ -49,7 +49,7 @@ if (!isset($_SESSION['name'])) {
                 </div>
                 <div>
                     <img src="../img/security.png" alt="gma" />
-                    <h2><a href="sendmsg.php">Manage Requests</a></h2>
+                    <h2><a href="sendkey.php">Manage Requests</a></h2>
                 </div>
                 <div>
                     <img src="../img/landing1.png" alt="gma" />
