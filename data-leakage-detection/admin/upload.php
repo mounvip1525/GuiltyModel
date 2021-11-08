@@ -47,7 +47,11 @@ if (!isset($_SESSION['name'])) {
 						mysqli_select_db($con, "dataleakage");
 						$sql = "INSERT INTO presentation(subject,Topic,fname,time,sendto,objNames) VALUES ('" . $_POST["sub"] ."','" . $_POST["pre"] . "','" . $_FILES["file"]["name"] ."','".date("y/m/d")."','".""."','".""."');";
 						$result6 = mysqli_query($con,$sql) or die ("Could not send data into DB: " . mysqli_error($con));
-						}
+						echo "<script>
+						alert('Upload success!');
+						window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/upload.php';
+						</script>";
+					}
 				}
 				mysqli_close($con);
 			}
@@ -59,7 +63,6 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php">USERS</a></h3>
 		<h3><a href="m_arti.php">ARTICLES</a></h3>
         <h3><a href="upload.php" class="admin-active-nav">UPLOAD</a></h3>
-		<h3><a href="sendmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
         <h3><a href="sendkey.php">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>

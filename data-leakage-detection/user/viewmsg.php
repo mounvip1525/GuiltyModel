@@ -49,6 +49,10 @@ if (!isset($_SESSION['name'])) {
 				mysqli_select_db( $con,"dataleakage");
 				$qry="Select * FROM msg where reciver='$_SESSION[name]'";
 					$result=mysqli_query($con,$qry);
+				$count=mysqli_num_rows($result);
+				if($count===0){
+					echo '<h1 style="text-align:center;margin:15% auto">No messages yet</h1>';
+				} else 
 				while($w1=mysqli_fetch_array($result))
 				{	
 					echo "<li>".$w1['sender']. ' says '.$w1['msg']."</li>";		

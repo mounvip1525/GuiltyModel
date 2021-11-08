@@ -12,7 +12,10 @@ $con = mysqli_connect("localhost","root",$dbPass);
         mysqli_select_db($con,"dataleakage" );
         $sql = "delete from register where username='$id'";
         $result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
-        header("Location: admin.php");
+        echo "<script>
+        alert('User deleted successfully!');
+        window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/admin.php';
+        </script>";
         exit;
     }
 ?>

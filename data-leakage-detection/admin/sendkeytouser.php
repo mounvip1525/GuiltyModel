@@ -19,8 +19,11 @@ $a3 = $_POST['a3'];
 		if (!mysqli_query($con,$sql))
 			echo('Error : ' . mysqli_error($con));
 		else
-			echo '<script language="javascript">alert("Key has been successfully send!")</script>';				
-		header("Location: admin.php");
+		echo "<script>
+		alert('Key has been shared successfully!');
+		window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/admin.php';
+		</script>";
+		exit;
 		exit;
 	}
 ?>

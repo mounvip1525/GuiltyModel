@@ -33,9 +33,8 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php">USERS</a></h3>
 		<h3><a href="m_arti.php">ARTICLES</a></h3>
         <h3><a href="upload.php">UPLOAD</a></h3>
-		<h3><a href="viewmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
-        <h3><a href="sendkey.php" class="admin-active-nav">KEYS</a></h3>
+        <h3><a href="sendkey.php" class="admin-active-nav">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>
     </nav>
 	<div class="req-main">

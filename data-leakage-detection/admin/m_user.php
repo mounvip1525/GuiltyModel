@@ -32,7 +32,6 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php" class="admin-active-nav">USERS</a></h3>
 		<h3><a href="m_arti.php">ARTICLES</a></h3>
         <h3><a href="upload.php">UPLOAD</a></h3>
-		<h3><a href="sendmsg.php">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
         <h3><a href="sendkey.php">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>

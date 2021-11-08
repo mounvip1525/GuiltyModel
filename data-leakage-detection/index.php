@@ -38,7 +38,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus beatae possimus, non tenetur ratione itaque! Harum exercitationem consectetur perspiciatis incidunt? Placeat assumenda provident sed dignissimos facilis voluptatem laborum quaerat!</p>
             </div>
         </div>
-        <button class="c-btn">Try Now</button>
+        <button class="c-btn"><a href="register.html" style="text-decoration:none;color:white">Try Now</a></button>
     </div>
 </body>
 </html>

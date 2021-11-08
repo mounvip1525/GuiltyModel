@@ -14,7 +14,10 @@ require("config.php");
         mysqli_select_db( $con,"dataleakage");
 	$sql = "insert into msg (sender, email, reciver, msg) values ('$_SESSION[name]', '$a1','$a2', '$a3')";
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
-	header("Location: admin.php");
+	echo "<script>
+	alert('Message sent!');
+	window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/admin.php';
+	</script>";
 	exit;
 								}
 ?>

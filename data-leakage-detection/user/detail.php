@@ -57,7 +57,7 @@ if (!isset($_SESSION['name'])) {
 			<label>Will you follow the privacy norms</label>
 			<input type="text" name="yesno" id="yesno" placeholder="Yes/No"/>
 			<input type="hidden" name="s2" id="s2" value='.$w1["Topic"].'>
-			<button type="submit" name="encr" value="Download"><img src="../img/download.png" style="height:2rem" /></button>
+			<button type="submit" name="encr" value="Download" style="height:3rem"><img src="../img/download.png" style="height:2rem"class="rotate-img" /></button>
 			</form>		
 			';
 		}
