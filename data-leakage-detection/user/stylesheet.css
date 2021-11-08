@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	font-family: 'Roboto', sans-serif;
+}  
+/* userlanding */
+.u-landing {
+	text-align: center;
+	height: 100vh;
+  }
+  .u-landing h1 {
+	margin: 2% 0;
+  }
+  .u-landing > div {
+	display: flex;
+	margin: 5% 0 0;
+	padding: 0 6%;
+	background: linear-gradient(180deg, white 20%, #193956 20%);
+  }
+  .u-landing > div > div {
+	padding: 2% 4%;
+	margin: 1% 2%;
+	z-index: 20000;
+	background: white;
+	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.25);
+  }
+  .u-landing > div > div > img {
+	height: 5rem;
+	margin-bottom: 3%;
+  }
+  .user-active-nav{
+	  border-bottom:2px solid white;
+  }
+
+  /* tables */
+  table{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border:3px solid #193956;
+    max-width:70vw;
+	margin:5% auto !important;
+}
+thead,tbody,tr{
+    width: 100%;
+}
+tbody{
+    display: flex;
+    flex-direction: column;
+}
+tr{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    font-size: large;
+}
+tr:nth-child(even){
+    background: #778DA1;
+}
+tr img{
+    height:3.5rem;
+}
+thead{
+    background:#193956;
+    color:white;
+    padding:3% 0;
+    font-size: large;
+}
+td,th{
+    width:120px;
+    text-align: center;
+	min-height:50px;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+/* user -  messages */
+.n-main{
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    width:40%;
+    margin:5% auto;
+    position:relative;
+}
+.n-main div{
+    background:#193956;
+    height:80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.n-main div img{
+    height:8rem;
+    position:absolute;
+    top:-15%;
+}
+.n-main ul{
+    padding:3%;
+}
+.n-main li{
+    font-size: medium !important;
+}
+/* request */
+.req-main{
+    display:flex;
+    min-height:100vh;
+    font-size: large;
+}
+.req-main > div{
+    width:50%;
+    padding: 5%;
+}
+.req-main input{
+    width:100% !important;
+}
+.req-main h1{
+    margin-bottom:10%;
+    text-align: center;
+    margin-top:-15% !important;
+}
+.req-main > div button {
+    width:max-content;
+    margin:5% auto;
+    padding:2% 7%;
+}
+.req-main .auth-form{
+    width:50%;
+    padding:10% !important;
+    box-sizing: border-box;
+}
+.req-main ul,.n-main ul{
+    list-style-type: none;
+}
+.req-main li,.n-main li{
+    padding:3%;
+    border-left:3px solid #193956;
+    margin:5%;
+    font-size: x-large;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+/* upload and lock files */
+.upload-main{
+    width:40%;
+    margin:auto;
+    text-align: center;
+}
+.upload-main div{
+    padding:10%;
+    box-sizing: border-box;
+    margin:5%;
+    border-radius: 5px;
+}
+.upload-main input{
+    width:100% !important
+}
+.upload-main button{
+    width:max-content;
+    margin:5% auto 0;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    padding:2% 8%;
+}
+.upload-main button, .rotate-img{
+    transform: rotate(180deg);
+    height:1rem;
+}
+.upload-main h1{
+    margin-bottom:8%;
+}

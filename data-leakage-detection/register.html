@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <title>Data Leakage Detection</title>
+	  <meta charset="utf-8" />
+	  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+      function valid() {
+        var aa=document.s.uname.value;
+        if(aa=="")  {
+          alert("Enter Name");
+          document.s.uname.focus();
+          return false;
+        }
+        var a=document.s.uid.value;
+        if(a=="") {
+          alert("Enter User ID");
+          document.s.uid.focus();
+          return false;
+        }
+        var b=document.s.pass.value;
+        if(b=="") {
+          alert("Enter Password");
+          document.s.pass.focus();
+          return false;
+        }
+
+        var emailfilter=/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+        var m=emailfilter.test(document.s.email.value);
+        if(m==false) {
+          alert("Please enter a valid Email Id");
+          document.s.email.focus();
+          return false;
+        }
+
+      }
+    </script>
+  </head>
+<body>
+      <div class="auth-main">
+        <div>
+            <h1 class="auth-head">GMA</h1>
+            <img src="img/auth.png" alt="gma" />
+        </div>
+        <div class="auth-form">
+          <h1>SIGNUP</h1>
+          <p>Already have an account? <a href="userlogin.php" style="color:white">Login</a></p>
+          <form name="s" action="register.php" method="POST" onsubmit="return valid()" class="l-form">
+            <label for="name">Name</label>
+            <input type="text" name="uname" id="uname" >
+            <label for="username">User ID</label>
+            <input type="number" name="uid" id="uid">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="pass" id="pass">
+            <input type="submit" name="s" value="SUBMIT" class="c-btn c-btn-2"> 
+          </form>
+        </div>
+      </div>
+</body>
+</html>
