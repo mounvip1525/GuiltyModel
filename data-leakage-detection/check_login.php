@@ -14,7 +14,7 @@ if(isset($username, $password)) {
     $sql="SELECT * FROM admin WHERE username ='$myusername' and password =('$mypassword')";
     $result=mysqli_query($dbC, $sql);
     // Mysql_num_row is counting table row
-    $count=mysqli_num_rows($result)-1;
+    $count=mysqli_num_rows($result);
     // If result matched $myusername and $mypassword, table row must be 1 row
     if($count==1){
         // Register $myusername, $mypassword and redirect to file "admin.php"

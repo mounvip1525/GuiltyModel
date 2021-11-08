@@ -57,7 +57,7 @@ if (!isset($_SESSION['name'])) {
 						while($w1=mysqli_fetch_array($result)) {
 						echo
 							'<div class="leak-deets">'.
-								'<p>'.$w1["probability"].'%</p>'.
+								'<p>'.((floor($w1["probability"]*100)/100)*100).'%</p>'.
 								"<div>".
 									"<h3>".$w1["name"]."</h3>".
 									"<p>mounvip1525@gmail.com</p>".

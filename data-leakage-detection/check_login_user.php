@@ -15,13 +15,20 @@ if(isset($username, $password)) {
     $result=mysqli_query($dbC, $sql);
     // Mysql_num_row is counting table row
     $count=mysqli_num_rows($result);
+    $user_username = "";
+    while($w1=mysqli_fetch_array($result))
+    {
+        $user_username = $w1['username'];
+    }
+    // echo 'helllo'.$user_username;
     // If result matched $myusername and $mypassword, table row must be 1 row
     if($count==1){
+        // echo "resutttttt".$result;
         // Register $myusername, $mypassword and redirect to file "admin.php"
         $_SESSION['admin']= "admin";
         $_SESSION['password']= "password";
         session_start();
-        $_SESSION['name']= $myusername;
+        $_SESSION['name']= $user_username;
         header("location:user/user.php");
     }
     else {

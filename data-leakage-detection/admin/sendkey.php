@@ -64,7 +64,7 @@ if (!isset($_SESSION['name'])) {
 					while($w1=mysqli_fetch_array($result))
 					{
 						echo
-						'<li>'.$w1["id"].' requests for <b>'.$w1["filename"].'</b></li>';
+						'<li>'.$w1["user"].' requests for <b>'.$w1["filename"].'</b></li>';
 					}
 				}
 			?>

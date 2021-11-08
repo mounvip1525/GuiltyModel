@@ -2,6 +2,9 @@
 session_start();
 require("config.php");
 $con = mysqli_connect("localhost","root",$dbPass);
+echo '<script language="javascript">';
+echo 'alert("message successfully sent")';
+echo '</script>';
 if (!$con)
     echo('Could not connect: ' . mysqli_error());
 else {
@@ -9,7 +12,7 @@ else {
     $qry1="SELECT * from register";
     $result1=mysqli_query($con, $qry1);
     //leaked data set S
-    $Set=["t4","t3","t2"];
+    $Set=["t2","t3","t1"];
     //$S="t1";
     $p=0.2; // most probable value of p
     $qry5="SELECT * from record";
@@ -58,6 +61,7 @@ else {
     }
     for($i =0;$i<count($finalAgents);$i++){
         $prob=1-$product[$i];
+        echo $prob."  ".$finalAgents[$i]."<br />";
         $sql6 = "UPDATE leaker SET probability='$prob' WHERE name='$finalAgents[$i]' ";
         $result6 = mysqli_query($con,$sql6) or die ("Could not send data into DB: " . mysqli_error($con));
     }
