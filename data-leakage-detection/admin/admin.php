@@ -31,10 +31,11 @@ if (!isset($_SESSION['name'])) {
         <div>
             <h1>WELCOME ADMIN!</h1>
             <ul>
-                <li>You have super priviledges</li>
-                <li>You can manage users!</li>
-                <li>You can decide whom to share your keys with</li>
-                <li>You can blacklist users to maintain authencity</li>
+                <li>As a super user you have access to all secret files and keys.</li>
+                <li>You are solely responsible for managing the files catalog.</li>
+                <li>Only you have the privilege to grant download access with secret keys.</li>
+                <li>Head over to the 'Leak User' tab to receive real time Guilt Scores.</li>
+                <li>You can send warnings and blacklist users to maintain authenticity.</li>
             </ul>
         </div>
         <div>
@@ -52,7 +53,7 @@ if (!isset($_SESSION['name'])) {
                     <h2><a href="sendkey.php">Manage Requests</a></h2>
                 </div>
                 <div>
-                    <img src="../img/landing1.png" alt="gma" />
+                    <img src="../img/fileupload.png" alt="gma" />
                     <h2><a href="upload.php">Manage Uploads</a></h2>
                 </div>
             </div>

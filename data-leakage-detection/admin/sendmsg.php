@@ -41,7 +41,9 @@ if (!isset($_SESSION['name'])) {
     </nav>
 
 	<div style="width:40%;margin:auto">
+	<br>
         <img src="../img/message.png" alt="message" class="msg-img"/>
+	<br>
         <form name="s" action="msg.php" method="POST" onsubmit="return valid()" class="a-msg auth-form">
             <label for="name">User Name</label>
             <input type="text" name="a2" id="a2" >

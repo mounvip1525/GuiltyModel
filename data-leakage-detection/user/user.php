@@ -42,15 +42,15 @@ header( 'Content-Type: text/html; charset=utf-8' );
         <div>
             <div>
                 <img src="../img/article.png" alt="article" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tenetur inventore consequuntur, pariatur repellendus deleniti quia in quidem iure amet facere? Tempora quaerat recusandae exercitationem praesentium repudiandae sit laborum delectus?</p>
+                <p><strong>You can view all the open files in the catalog. Request for the key in order to access files. The admin has sole privileges to grant access to the files catalog which will automatically update your Guilt Score.</strong></p>
             </div>
             <div>
-                <img src="../img/security.png" alt="security" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tenetur inventore consequuntur, pariatur repellendus deleniti quia in quidem iure amet facere? Tempora quaerat recusandae exercitationem praesentium repudiandae sit laborum delectus?</p>
+                <img src="../img/keys.png" alt="security" />
+                <p><strong>The keys will be updated in the 'KEYS' tab. Once you receive the key from the admin, you can access the file. Make sure to use this sensitive data responsibly in order to mantain the security of the ecosystem.</strong></p>
             </div>
             <div>
-                <img src="../img/keys.png" alt="keys" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tenetur inventore consequuntur, pariatur repellendus deleniti quia in quidem iure amet facere? Tempora quaerat recusandae exercitationem praesentium repudiandae sit laborum delectus?</p>
+                <img src="../img/message.png" alt="keys" />
+                <p><strong>Your activity is closely monitored alongwith real time updation of your Guilt Score. You will receive a maximum of 3 warnings from the admin before being blacklisted from the platform in case any suspicious activity is found on your end.</strong></p>
             </div>
         </div>
 	</div>
