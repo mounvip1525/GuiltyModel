@@ -8,7 +8,7 @@
  **********************************************************************/
 $dbHost = 'localhost';
 $dbUser = 'root';
-$dbPass = 'Mounvi@123';
+$dbPass = '';
 $dbName = 'dataleakage';
 $dbC = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName)
         or die('Error Connecting to MySQL DataBase');

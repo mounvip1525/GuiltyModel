@@ -6,7 +6,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/userlogin.php");
+		      echo  header("Location: http://localhost/GuiltyModel/data-leakage-detection/userlogin.php");
 		}
 		else{
 		define('ADMIN',$_SESSION['name']); //Get the user name from the previously registered super global variable
@@ -40,7 +40,7 @@ if (!isset($_SESSION['name'])) {
 	<div class="invalid-user">
 		<img src="./img/invalid.png" alt="invalid" />
 		<div>
-			<p>You will be notified to the admin about your inpropriate request to access the article.<p>
+			<p>The admin will be notified about your inappropriate request to access the article.<p>
 		</div>
 		<button><a href="view file.php">Request Valid access</a></button>
 	</div>

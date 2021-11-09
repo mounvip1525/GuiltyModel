@@ -50,7 +50,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
             </div>
             <div>
                 <img src="../img/message.png" alt="keys" />
-                <p><strong>Your activity is closely monitored alongwith real time updation of your Guilt Score. You will receive a maximum of 3 warnings from the admin before being blacklisted from the platform in case any suspicious activity is found on your end.</strong></p>
+                <p><strong>Your activity is closely monitored alongwith real time updation of your Guilt Score. You will receive messages from the admin and can even be blacklisted from the platform in case any suspicious activity is found on your end.</strong></p>
             </div>
         </div>
 	</div>

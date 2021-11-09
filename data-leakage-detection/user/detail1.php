@@ -39,7 +39,7 @@ $sql = "insert into leaker ( name) values ('$_SESSION[name]')";
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
 	echo "<script>
 	alert('Attempt to wrongly gain access the article');
-	window.location.href='http://localhost/ISAA-Project/data-leakage-detection/user/askadmin.php';
+	window.location.href='http://localhost/GuiltyModel/data-leakage-detection/user/askadmin.php';
 	</script>";
 	exit;
 }					
