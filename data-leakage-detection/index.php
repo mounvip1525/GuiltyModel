@@ -15,9 +15,9 @@
         <h1>GUILTY MODEL AGENT</h1>
         <div class="landing">
             <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat molestiae, quisquam adipisci eum nostrum assumenda quasi harum voluptates vel pariatur earum quibusdam, repellat aspernatur ducimus ipsa? Eius consectetur repudiandae odio.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque reiciendis veniam quia ullam deleniti doloribus, culpa cum ex aspernatur commodi libero ut dolorem ducimus aliquam impedit veritatis voluptatum quae!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae ullam non delectus, et soluta adipisci maxime sapiente enim! Mollitia ullam consectetur iure praesentium voluptatum ut distinctio officiis doloribus veniam.</p>
+                <p style="font-size:2.5rem; color: #193956 "><strong>Instantly Monitor Internal Data Leaks for your Organization!</strong></p>
+                <p>'Guilty Model' is a fast and effective solution for identifying and intercepting data breaches within an ecosystem. We have employed Probability Distribution to find the 'Guilt' of an Agent. This 'Guilt Score' can help immensely while investigating internal data leaks.</p>
+                <p style="color:  #566573 ;"><em><strong>CSE3501 Project - Fall Semester 2021.</strong></em></p>
             </div>
             <img src="img/landing.png" alt="gma" />
         </div>
@@ -27,15 +27,15 @@
         <div>
             <div>
                 <img src="img/landing1.png" alt="gma">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus beatae possimus, non tenetur ratione itaque! Harum exercitationem consectetur perspiciatis incidunt? Placeat assumenda provident sed dignissimos facilis voluptatem laborum quaerat!</p>
+                <p><strong>Secure File Access with completely monitored uploads and downloads.</strong></p>
             </div>
             <div>
                 <img src="img/landing2.png" alt="gma">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus beatae possimus, non tenetur ratione itaque! Harum exercitationem consectetur perspiciatis incidunt? Placeat assumenda provident sed dignissimos facilis voluptatem laborum quaerat!</p>
+                <p><strong>Cohesive Inventory management and efficient data tracking for administrators with real time Guilt Scores for every user in the ecosystem.</strong></p>
             </div>
             <div>
                 <img src="img/landing3.png" alt="gma">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus beatae possimus, non tenetur ratione itaque! Harum exercitationem consectetur perspiciatis incidunt? Placeat assumenda provident sed dignissimos facilis voluptatem laborum quaerat!</p>
+                <p><strong>GMA is an easy-to-use and reliable solution providing services free of cost.</strong></p>
             </div>
         </div>
         <button class="c-btn">Try Now</button>
