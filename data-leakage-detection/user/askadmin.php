@@ -24,72 +24,26 @@ if (!isset($_SESSION['name'])) {
 	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="../stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="body">
-	<header class="mainHeader">
-		<img src="img/logo.gif">
-		<nav><ul>	
-			<li ><a href="user.php">Home</a></li>
-			<li><a href="view file.php">View File</a></li>
-			<li><a href="viewmsg.php">View msg</a></li>
-			<li ><a href="leakfile.php">LeakFile</a></li>
-			<li class="active"><a href="viewkey.php">ViewKey</a></li>
-	</ul></nav>
-	</header>
-		
-	<div class="mainContent1">
-		<div class="content">	
-				<article class="topcontent1">	
-					<header>
-						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE"> Ask Key To Admin</a></h2>
-					</header>
-					
-					
-					
-            <table align="center" cellpadding="" cellspacing="" width="">
-              <tr> 
-                <td colspan="2" align="center"><font size="2"><b>
-                  </b></font></td>
-              </tr>
-              <tr> 
-                <td><font face="Courier New" size="+1"><strong>YOU ARE THE LEAKER</strong></font></td>
-                <td></td>
-              </tr>
-              
+<body>
 
-            
-          
-            </table>
-          </form>
-        </div>
-   
-
-
-
-
-						</p>
-	</content>
-					
-				</article>
-
-				</div>
-<aside class="top-sidebar">
-					<article>
-					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
-					<li><a href="logout.php">Logout</a></li>
-					
-					<p></p>
-				    </article>
-				</aside>	
-		</div>
-			
-				
-	</div>
+	<nav>
+        <h3><a href="../index.php">HOME</a></h3>
+        <h3><a href="view file.php" class="user-active-nav">ARTICLES</a></h3>
+		<h3><a href="viewmsg.php">MESSAGES</a></h3>
+        <h3><a href="viewkey.php">KEYS</a></h3>
+        <h3><a href="logout.php">LOGOUT</a></h3>
+    </nav>
 	
-	<footer class="mainFooter">
-		<p>CSE3501 Project</p>
-	</footer>
+	<div class="invalid-user">
+		<img src="./img/invalid.png" alt="invalid" />
+		<div>
+			<p>You will be notified to the admin about your inpropriate request to access the article.<p>
+		</div>
+		<button><a href="view file.php">Request Valid access</a></button>
+	</div>
 
 </body>
 </html>
