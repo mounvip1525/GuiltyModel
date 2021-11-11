@@ -14,7 +14,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/adminlogin.php");
+		      echo  header("Location: http://localhost/GuiltyModel/data-leakage-detection/adminlogin.php");
 		}
 		else{
 		define('ADMIN',$_SESSION['name']); //Get the user name from the previously registered super global variable
@@ -53,14 +53,22 @@ if (!isset($_SESSION['name'])) {
 					else {
 						mysqli_select_db($con, "dataleakage");
 						$qry="Select * FROM leaker";
+						$qryRec="SELECT * FROM record";
 						$result=mysqli_query($con, $qry);
 						while($w1=mysqli_fetch_array($result)) {
+							// $q1 ="Select subject FROM record WHERE sendto=".$w1["name"]."";
+							// $fileName = mysqli_query($con,$q1);
+							$luName=$w1["name"];
+							$fileName='';
+							$accesType ='';
+							$qryExist = "EXISTS(SELECT 1 FROM record WITH(NOLOCK) WHERE sendto = $luName)";
+    					$resExist=mysqli_query($con,$qryExist);
 						echo
 							'<div class="leak-deets">'.
 								'<p>'.((floor($w1["probability"]*100)/100)*100).'%</p>'.
 								"<div>".
 									"<h3>".$w1["name"]."</h3>".
-									"<p>mounvip1525@gmail.com</p>".
+									"<p></p>".
 								"</div>".
 								"<div class='leak-send'>".
 									"<button>".

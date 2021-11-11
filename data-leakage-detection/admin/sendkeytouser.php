@@ -14,14 +14,14 @@ $a3 = $_POST['a3'];
 		mysqli_select_db( $con,"dataleakage");
 		$sql = "UPDATE askkey SET k='$a2',status='yes' WHERE filename='$a3'and user='$a1' ";
 		$result = mysqli_query($con,$sql) or die ("Could not send data into DB: " . mysqli_error($con));
-		$sql = "INSERT INTO record(subject,topic,sendto,time) VALUES ('" . $_POST["a3"] ."','" . $_POST["a2"] . "','" . 
-		$_POST["a1"] ."','".date("y/m/d")."');";
+		$sql = "INSERT INTO record(subject,topic,sendto,time,legal) VALUES ('" . $_POST["a3"] ."','" . $_POST["a2"] . "','" . 
+		$_POST["a1"] ."','".date("y/m/d")."','yes');";
 		if (!mysqli_query($con,$sql))
 			echo('Error : ' . mysqli_error($con));
 		else
 		echo "<script>
 		alert('Key has been shared successfully!');
-		window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/admin.php';
+		window.location.href='http://localhost/GuiltyModel/data-leakage-detection/admin/admin.php';
 		</script>";
 		exit;
 		exit;

@@ -14,7 +14,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data-leakage-detection/adminlogin.php");
+		      echo  header("Location: http://localhost/GuiltyModel/data-leakage-detection/adminlogin.php");
 		}
 		else{
 		define('ADMIN',$_SESSION['name']); //Get the user name from the previously registered super global variable

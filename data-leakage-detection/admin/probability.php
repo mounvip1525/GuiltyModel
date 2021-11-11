@@ -12,7 +12,7 @@ else {
     $qry1="SELECT * from register";
     $result1=mysqli_query($con, $qry1);
     //leaked data set S
-    $Set=["t2","t3","t1"];
+    $Set=["t3","t1"];
     //$S="t1";
     $p=0.2; // most probable value of p
     $qry5="SELECT * from record";

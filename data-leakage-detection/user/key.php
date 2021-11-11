@@ -14,7 +14,7 @@ $id = $_GET['id'];
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
 	echo "<script>
 	alert('Key request sent!');
-	window.location.href='http://localhost/ISAA-Project/data-leakage-detection/user/user.php';
+	window.location.href='http://localhost/GuiltyModel/data-leakage-detection/user/user.php';
 	</script>";
 	exit;
 	}

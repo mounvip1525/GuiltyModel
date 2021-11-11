@@ -8,9 +8,22 @@ else {
     mysqli_select_db($con,"dataleakage" );
     $k1=$_POST['s1'];
     $k2=$_POST['s2'];
+    $k3=$_POST['s3'];
+    $k4=$_POST['s4'];
+    // $qry = "EXISTS(SELECT 1 FROM record WITH(NOLOCK) WHERE sendto = '$k3')";
+    // $res=mysqli_query($con,$qry);
+    // echo $result;
 //$qry="SELECT * FROM presentation WHERE Topic = '$k1' ";
 //$result=mysql_query($qry)or die ("Could not insert data into DB: " . mysql_error());;
 if($k1==$k2){	
+    $qry = "EXISTS(SELECT 1 FROM record WITH(NOLOCK) WHERE sendto = '$k3')";
+    $res=mysqli_query($con,$qry);
+    echo "<script>	alert('<?php $res?>');
+	</script>";
+    if(!$res){
+        $sql = "INSERT INTO record(subject,topic,sendto,time,legal) VALUES ('" . $_POST["s4"] ."','" . $_POST["s2"] . "','" . $_POST["s3"] ."','".date("y/m/d")."','no');";
+        mysqli_query($con,$sql);
+     }
 echo'enter success      
 '.$file = './download/'.$_GET['id'];
    	$title=$_GET['id'];

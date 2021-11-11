@@ -16,7 +16,7 @@ require("config.php");
 	$result = mysqli_query($con,$sql) or die ("Could not insert data into DB: " . mysqli_error());
 	echo "<script>
 	alert('Message sent!');
-	window.location.href='http://localhost/ISAA-Project/data-leakage-detection/admin/admin.php';
+	window.location.href='http://localhost/GuiltyModel/data-leakage-detection/admin/admin.php';
 	</script>";
 	exit;
 								}

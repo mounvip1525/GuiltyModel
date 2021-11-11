@@ -6,7 +6,7 @@ if (!isset($_SESSION['name'])) {
 		//$_SESSION['error'] = "Please Login First";
 		echo "<script type=\"text/javascript\">"." alert('Please Login'); " ."</script>";
 		} if (!$_SESSION['name']){
-		      echo  header("Location: http://localhost/data lekage detaction/adminlogin.php");
+		      echo  header("Location: http://localhost/GuiltyModel/data-leakage-detection/adminlogin.php");
 		}
 		else{
 		define('ADMIN',$_SESSION['name']); //Get the user name from the previously registered super global variable
@@ -34,7 +34,7 @@ if (!isset($_SESSION['name'])) {
 		<h3><a href="m_user.php">USERS</a></h3>
 		<h3><a href="m_arti.php">ARTICLES</a></h3>
         <h3><a href="upload.php">UPLOAD</a></h3>
-		<h3><a href="viewmsg.php" class="admin-active-nav">MESSAGES</a></h3>
+		<h3><a href="sendmsg.php" class="admin-active-nav">MESSAGES</a></h3>
 		<h3><a href="leakfile.php">LEAK USER</a></h3>
         <h3><a href="sendkey.php">REQUESTS</a></h3>
         <h3><a href="logout.php">LOGOUT</a></h3>
