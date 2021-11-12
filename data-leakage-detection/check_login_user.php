@@ -23,7 +23,6 @@ if(isset($username, $password)) {
     // echo 'helllo'.$user_username;
     // If result matched $myusername and $mypassword, table row must be 1 row
     if($count==1){
-        // echo "resutttttt".$result;
         // Register $myusername, $mypassword and redirect to file "admin.php"
         $_SESSION['admin']= "admin";
         $_SESSION['password']= "password";

@@ -82,6 +82,45 @@ if (!isset($_SESSION['name'])) {
 					}
 				?>
 			</div>	
+			<div>
+				<h3 style="text-align:center">Illegally accesses:-</h3>
+				<div class="leak-div">				
+				<?PHP
+					require("config.php");
+					$con = mysqli_connect("localhost","root",$dbPass);
+					if (!$con)
+						echo('Could not connect: ' . mysqli_error());
+					else {
+						mysqli_select_db($con, "dataleakage");
+						$qryRec="SELECT * FROM record where legal='no'";
+						$result=mysqli_query($con, $qryRec);
+						while($w1=mysqli_fetch_array($result)) {
+							// $q1 ="Select subject FROM record WHERE sendto=".$w1["name"]."";
+							// $fileName = mysqli_query($con,$q1);
+							$luName=$w1["sendto"];
+							$fileName=$w1['subject'];
+							$qryExist = "EXISTS(SELECT 1 FROM record WITH(NOLOCK) WHERE sendto = $luName)";
+    					$resExist=mysqli_query($con,$qryExist);
+						echo
+							'<div class="leak-deets">'.
+								'<p class="illegal-p">!</p>'.
+								"<div>".
+									"<h3>".$w1["sendto"]."</h3>".
+									"<p>Illegally accessed the file:<b>".$w1["subject"]."</b></p>".
+								"</div>".
+								"<div class='leak-send'>".
+									"<button>".
+										"<a href='sendmsg.php?".$w1["sendto"]."'>".
+											"<img src='../img/send.png' alt='send message' />".
+										"</a>".
+									"</button>".
+								"</div>".
+							"</div>";
+						}
+					}
+				?>
+			</div>	
+			</div>
 		</div>	
 			
 		<form action="resetprobability.php" class="reset-div">

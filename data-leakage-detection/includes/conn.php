@@ -9,7 +9,7 @@ $host = "localhost";
 $username = "root";
 
 // Database password
-$password = "";
+$password = "Mounvi@123";
 
 // Name of database
 $database = "dataleakage";
