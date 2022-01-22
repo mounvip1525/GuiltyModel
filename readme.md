@@ -29,7 +29,23 @@ This module analyses which user has the leaked file and sort the list of the pro
 In this module the admin can make changes to the authority of the users. In other words, he can black list the “known bad” by using the probability of the leaker calculated using the guilt model in order to ensure security of the system.
 
 ## Guilty Algorithm
+Say the distributor has the set T = {t1, . . . , tm}. The leaked set found out is S. Assumptions made in this implementation are:
+For all t, t’ ∈ S such that t ≠ t’ the provenance of t is independent of the provenance of t’
+An object t ∈ S can only be obtained by the target in one of two ways:
+A single agent Ui leaked t from its own Ri set or the target guessed (or obtained through other means) t without the help of any of the n agents.
 
+Consider that sets T, R’s and S are as follows: T = {t1, t2, t3}, R1 = {t1, t2}, R2 = {t1, t3}, S = {t1, t2, t3}. For this situation, every one of the three of the distributor’s objects have been leaked and show up in S. Consider how the target may have gotten object t1, which was given to both agents. From Assumption 2, the target either guessed t1 or one of U1 or U2 leaked it. Knowing that the probability of the former event is p, so assuming that probability that each of the two agents leaked t1 is the same cases formed are:
+the target guessed t1 with probability p;
+* agent U1 leaked t1 to S with probability (1 − p)/2
+* agent U2 leaked t1 to S with probability (1 − p)/2
+Similarly, it is found that agent U1 leaked t2 to S with probability 1 − p since he/she is the only agent that has this data object. Given these values, the probability that agent U1 is not guilty can be computed, namely that U1 did not leak either object:
+
+P r{G’1|S} = (1 − (1 − p)/2) × (1 − (1 − p)) (1)
+Hence, the probability that U1 is guilty is:
+P r{G1|S} = 1 − P r{G’1} (2)
+Consider the set of agents Vt = {Ui |t ∈ Ri} that have t in their data sets, now generalizing (1) and (2) :
+P r{Ui leaked t to S} = { 1−p /|Vt| , if Ui ∈ Vt and 0, otherwise } (3) Given that agent Ui is guilty if he leaks at least one value to S, with Assumption 1 and Equation 3 the probability P r{Gi |S} is computed, that agent Ui is guilty:
+P r{Gi |S} = 1 – πt∈S⋂Ri (1 – (1 – p)/ |Vt| ) (4)
 
 ## Contributors 👧
 <ul>
